@@ -15,9 +15,18 @@
         <div class="submit-area">
             <h4>Login</h4>
             <input type="text" placeholder="Email" class="form-control mb-3">
-            <input type="password" placeholder="password" class="form-control mb-3">
-            <button class="btn btn-success">Submit</button>
+            <input type="password" placeholder="Password" class="form-control mb-3">
+            <button id="login" class="btn btn-success">Submit</button>
         </div>
     </div>
+
+    <script>
+         // Javascript Event Search
+        const loginBtn = document.getElementById("login");
+        loginBtn.addEventListener('click', function(){
+            console.log("Clicked Me")
+        })
+       
+    </script>
 </body>
 </html>
