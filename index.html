@@ -26,7 +26,7 @@
             <div class="col-md-4">
                 <div class="deposit status">
                     <h5>Deposit</h5>
-                    <h2>$00</h2>
+                    <h2>$ <span id="currentDeposit">00</span></h2>
                 </div>
             </div>
             <div class="col-md-4">
@@ -74,10 +74,14 @@
         // Deposit button event handler
         const depositBtn = document.getElementById("addDeposit");
         depositBtn.addEventListener("click", function(){
-            console.log("Someone Clicked me !");
             const depositAmount = document.getElementById("depositAmount").value;
             const depositNumber = parseFloat(depositAmount);
-            console.log("depositNumber", depositNumber)
+            
+            const currentDeposit = document.getElementById("currentDeposit").innerText;
+            const currentDepositNumber = parseFloat(currentDeposit);
+            const totalDeposit = depositNumber + currentDepositNumber;
+            document.getElementById("currentDeposit").innerText = totalDeposit;
+            document.getElementById("depositAmount").value = "";
         })
        
     </script>
